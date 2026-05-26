@@ -20,7 +20,7 @@ Urban air pollution is a critical public health and environmental crisis. This d
 
 ## 🖥️ Dashboard Architecture & Pages
 
-The dashboard is structured into three primary pages:
+The dashboard is structured into four primary pages:
 
 ### Page 1: Exploratory Data Analysis (EDA) Insights
 Explore pollutant variations, distribution patterns, and relationships between key air quality indicators.
@@ -30,12 +30,8 @@ Explore pollutant variations, distribution patterns, and relationships between k
 *   **Seasonal Fluulations (Boxplot)**: Shows seasonal meteorological behaviors driving fluctuations, with summer and monsoon showing higher median values.
 *   **Yearly Trends**: Displays fluctuating improvement and worsening patterns from 2015 to 2024, showing a sharp rise in 2020 followed by gradual declines, emphasizing the need for persistent urban policies.
 
-🖼️ *Visualizations from the EDA section:*
-![EDA Heatmap](assets/eda_heatmap.png)
-![EDA PM2.5 Distribution](assets/eda_pm25_distribution.png)
-![EDA PM10 vs PM2.5 Scatter](assets/eda_pm10_vs_pm25.png)
-![EDA Seasonal Boxplot](assets/eda_seasonal_boxplot.png)
-![EDA Yearly Trend](assets/eda_pm25_yearly_trend.png)
+🖼️ *Page 1 Visual:*
+![Page 1: EDA Insights](assets/pg1.png)
 
 ---
 
@@ -48,9 +44,8 @@ Combining inferential statistics with unsupervised machine learning to group cit
     *   🔴 **Cluster 3 (High Pollution)**: Highly industrial, traffic-dense cities with elevated health risks.
 *   **Particulate Corelation**: Confirms that rising fine particulate matter (PM2.5) corresponds directly to rising dust pollution (PM10), indicating shared emission origins.
 
-🖼️ *Clustering Visuals:*
-![K-Means Clustering](assets/clustering_kmeans.png)
-![Clustering Details](assets/clustering_details.png)
+🖼️ *Page 2 Visual:*
+![Page 2: Statistical & Clustering Insights](assets/pg2.png)
 
 ---
 
@@ -60,9 +55,19 @@ A dynamic, customizable reporting view allowing users to slice and dice the data
 *   **AQI & Particulate Tracker**: Monitor how average AQI levels remain consistently high (typically in the 250-260 range), indicating a universally polluted urban environment.
 *   **Pollutant-wise Breakdown**: Tracks specific pollutant levels over time, revealing that while SO2 and NO2 remain low, PM10 remains significantly higher and remains the critical driver of poor AQI.
 
-🖼️ *Interactive Views:*
-![Interactive Filter Dashboard Overview](assets/dashboard_overview.png)
-![Interactive Dashboard Details](assets/dashboard_details.png)
+🖼️ *Page 3 Visual:*
+![Page 3: Filter-Interactive Dashboard](assets/pg3.png)
+
+---
+
+### Page 4: Comparison Dashboard Insights
+Compare air quality parameters across different cities, pollutant categories, and relative proportions.
+*   **Particulate Load Dominance**: Treemap and bar analysis show how PM10 and PM2.5 dominate the overall pollutant load.
+*   **City-wise AQI Comparison**: Reveals concentration of pollution stress (with Mumbai, Delhi, and Kolkata being the highest AQI zones) due to higher vehicular emissions, industrial density, and lower dispersal capacity.
+*   **Pollution % Contribution**: Confirms that pollution is distributed across multiple cities rather than isolated, with major cities contributing around 18–20% of the total PM2.5.
+
+🖼️ *Page 4 Visual:*
+![Page 4: Comparison Dashboard](assets/pg4.png)
 
 ---
 
@@ -77,18 +82,13 @@ A dynamic, customizable reporting view allowing users to slice and dice the data
 ```directory
 .
 ├── assets/                          # High-resolution dashboard screenshots (PNG)
-│   ├── dashboard_overview.png       # Interactive dashboard overview
-│   ├── dashboard_details.png        # Interactive dashboard charts
-│   ├── eda_heatmap.png              # Seasonal variation heatmap
-│   ├── eda_pm25_distribution.png    # Histogram distribution
-│   ├── eda_pm10_vs_pm25.png         # Scatter correlation plot
-│   ├── eda_seasonal_boxplot.png     # Boxplot
-│   ├── eda_pm25_yearly_trend.png    # Line chart trend
-│   ├── clustering_kmeans.png        # K-Means clustering graph
-│   └── clustering_details.png       # Clustering statistics
+│   ├── pg1.png                      # Page 1: EDA Insights
+│   ├── pg2.png                      # Page 2: Statistical & Clustering Insights
+│   ├── pg3.png                      # Page 3: Filter-Interactive Dashboard
+│   └── pg4.png                      # Page 4: Comparison Dashboard
 ├── AirQuality_Analysis_Report.pdf   # Detailed PDF Project Report
 ├── city_day.csv                     # Raw air quality dataset
-├── AirQuality_Analysis.pbix         # Power BI Desktop source file (3 Pages)
+├── AirQuality_Analysis.pbix         # Power BI Desktop source file (4 Pages)
 └── README.md                        # Project documentation (this file)
 ```
 
