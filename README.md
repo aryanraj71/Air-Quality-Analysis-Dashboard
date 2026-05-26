@@ -18,56 +18,51 @@ Urban air pollution is a critical public health and environmental crisis. This d
 
 ---
 
-## 🖥️ Dashboard Architecture & Key Pages
+## 🖥️ Dashboard Architecture & Pages
 
-The dashboard is structured into four primary analysis modules:
+The dashboard is structured into three primary pages:
 
-### 1. Exploratory Data Analysis (EDA) Insights
-Explore initial pollutant variations, distribution patterns, and relationships between key air quality indicators.
-*   **Seasonal Heatmaps**: Analyze how weather dynamics drive pollutant concentrations (e.g., PM2.5 and PM10 peaking during specific seasons like summer and monsoon).
-*   **PM2.5 Distribution**: A right-skewed histogram showing that while most days are moderately polluted, periodic extreme pollution spikes occur due to episodic events.
-*   **Pollutant Relationships**: A scatter plot of PM10 vs PM2.5 demonstrating a strong positive correlation, indicating shared emission origins (traffic, combustion, and dust). Delhi displays the highest risk exposure in this analysis.
-*   **Yearly Trends**: Displays fluctuating improvement patterns from 2015 to 2024, showing a sharp rise in 2020 followed by gradual declines, emphasizing the need for persistent urban policies.
+### Page 1: Exploratory Data Analysis (EDA) Insights
+Explore pollutant variations, distribution patterns, and relationships between key air quality indicators.
+*   **Seasonal Pollutant Variation (Heatmap)**: Analyzes how weather dynamics drive pollutant concentrations (e.g., PM2.5 and PM10 showing peak average values in monsoon and summer).
+*   **PM2.5 Distribution**: A right-skewed histogram indicating that while most days are moderately polluted, periodic extreme pollution spikes occur due to episodic events.
+*   **Pollutant Relationships (Scatter Plot)**: A scatter plot of PM10 vs PM2.5 showing a strong positive correlation, indicating shared emission origins (traffic, combustion, and dust). Delhi displays the highest risk exposure.
+*   **Seasonal Fluulations (Boxplot)**: Shows seasonal meteorological behaviors driving fluctuations, with summer and monsoon showing higher median values.
+*   **Yearly Trends**: Displays fluctuating improvement and worsening patterns from 2015 to 2024, showing a sharp rise in 2020 followed by gradual declines, emphasizing the need for persistent urban policies.
 
 🖼️ *Visualizations from the EDA section:*
-![EDA Heatmap & Scatter](assets/page_2_img_1.jpg)
-![Distribution & Trends](assets/page_2_img_2.jpg)
+![EDA Heatmap](assets/eda_heatmap.png)
+![EDA PM2.5 Distribution](assets/eda_pm25_distribution.png)
+![EDA PM10 vs PM2.5 Scatter](assets/eda_pm10_vs_pm25.png)
+![EDA Seasonal Boxplot](assets/eda_seasonal_boxplot.png)
+![EDA Yearly Trend](assets/eda_pm25_yearly_trend.png)
 
 ---
 
-### 2. Statistical Analysis & K-Means Clustering
-Combining inferential statistics with unsupervised machine learning to group cities based on pollution profiles.
-*   **Seasonal ANOVA/Differences**: Statistically confirms that season strongly impacts air quality, with Summer (~254 µg/m³) and Monsoon (~261 µg/m³) showing significantly higher average PM2.5 compared to Winter (~248 µg/m³).
+### Page 2: Statistical Analysis & K-Means Clustering Insights
+Combining inferential statistics with unsupervised machine learning to group cities based on pollution severity.
+*   **Seasonal Differences**: Statistically confirms that season strongly impacts air quality, with Summer (~254 µg/m³) and Monsoon (~261 µg/m³) showing significantly higher average PM2.5 compared to Winter (~248 µg/m³).
 *   **City Segmentation (K-Means)**: Segments cities into three distinct clusters:
     *   🟢 **Cluster 1 (Low Pollution)**: Residential or strictly regulated zones with cleaner profiles.
     *   🟡 **Cluster 2 (Moderate Pollution)**: Transitional cities experiencing mixed industrial and urban activity.
     *   🔴 **Cluster 3 (High Pollution)**: Highly industrial, traffic-dense cities with elevated health risks.
-*   **Particulate Corelation**: Confirms that rising fine particulate matter (PM2.5) corresponds directly to rising dust pollution (PM10).
+*   **Particulate Corelation**: Confirms that rising fine particulate matter (PM2.5) corresponds directly to rising dust pollution (PM10), indicating shared emission origins.
 
 🖼️ *Clustering Visuals:*
-![K-Means Clustering](assets/page_6_img_1.jpg)
+![K-Means Clustering](assets/clustering_kmeans.png)
+![Clustering Details](assets/clustering_details.png)
 
 ---
 
-### 3. Filter-Interactive Dashboard
-A dynamic, customizable reporting view allowing users to slice and dice the data.
+### Page 3: Filter-Interactive Dashboard
+A dynamic, customizable reporting view allowing users to slice and dice the data for customized insights.
 *   **Interactive Slicers**: Filter by **City, Year, Season, and Month** to perform localized root-cause analysis.
 *   **AQI & Particulate Tracker**: Monitor how average AQI levels remain consistently high (typically in the 250-260 range), indicating a universally polluted urban environment.
-*   **Pollutant-wise Breakdown**: Tracks specific pollutant levels over time, revealing that while SO2 and NO2 remain low, PM10 is the critical driver of overall poor AQI.
+*   **Pollutant-wise Breakdown**: Tracks specific pollutant levels over time, revealing that while SO2 and NO2 remain low, PM10 remains significantly higher and remains the critical driver of poor AQI.
 
 🖼️ *Interactive Views:*
-![Interactive Filter Dashboard](assets/page_7_img_2.jpg)
-
----
-
-### 4. Comparison & Share Dashboard
-Comparative analysis of pollutant load distribution across cities and pollutant types.
-*   **Pollutant Load Treemap**: Visualizes the contribution of each pollutant, highlighting PM10 and PM2.5 as the main drivers of AQI deterioration.
-*   **City-wise AQI Leaderboard**: Highlights Delhi, Mumbai, and Kolkata as the highest AQI zones due to vehicular density and industrial emissions.
-*   **Uniform Contribution**: Shows that major cities contribute around 18–20% of the total PM2.5 load, indicating that pollution is a regional, multi-city issue rather than an isolated local one.
-
-🖼️ *Comparison Visuals:*
-![Comparison Dashboard](assets/page_8_img_2.jpg)
+![Interactive Filter Dashboard Overview](assets/dashboard_overview.png)
+![Interactive Dashboard Details](assets/dashboard_details.png)
 
 ---
 
@@ -81,14 +76,19 @@ Comparative analysis of pollutant load distribution across cities and pollutant 
 ## 📂 Repository Structure
 ```directory
 .
-├── assets/                          # Extracted dashboard screenshots
-│   ├── page_1_img_1.jpg
-│   ├── page_2_img_1.jpg
-│   ├── page_2_img_2.jpg
-│   └── ... (other visual assets)
-├── 500120443_AryanRaj_DVIproject.pdf# Detailed PDF Project Report
+├── assets/                          # High-resolution dashboard screenshots (PNG)
+│   ├── dashboard_overview.png       # Interactive dashboard overview
+│   ├── dashboard_details.png        # Interactive dashboard charts
+│   ├── eda_heatmap.png              # Seasonal variation heatmap
+│   ├── eda_pm25_distribution.png    # Histogram distribution
+│   ├── eda_pm10_vs_pm25.png         # Scatter correlation plot
+│   ├── eda_seasonal_boxplot.png     # Boxplot
+│   ├── eda_pm25_yearly_trend.png    # Line chart trend
+│   ├── clustering_kmeans.png        # K-Means clustering graph
+│   └── clustering_details.png       # Clustering statistics
+├── AirQuality_Analysis_Report.pdf   # Detailed PDF Project Report
 ├── city_day.csv                     # Raw air quality dataset
-├── Project_DVI.pbix                 # Power BI Desktop source file
+├── AirQuality_Analysis.pbix         # Power BI Desktop source file (3 Pages)
 └── README.md                        # Project documentation (this file)
 ```
 
@@ -102,7 +102,7 @@ Comparative analysis of pollutant load distribution across cities and pollutant 
     ```
 2.  **Open in Power BI**:
     *   Make sure you have [Power BI Desktop](https://powerbi.microsoft.com/desktop/) installed.
-    *   Double-click `Project_DVI.pbix` to launch the dashboard.
+    *   Double-click `AirQuality_Analysis.pbix` to launch the dashboard.
 3.  **Verify Python Script Integration (Optional)**:
     *   For K-Means clustering visual execution, ensure Python is installed and configured in Power BI: `Options and settings > Options > Python scripting`.
     *   Required libraries: `pandas`, `scikit-learn`, `matplotlib`.
