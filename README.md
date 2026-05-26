@@ -2,9 +2,6 @@
 
 A comprehensive **Power BI Dashboard** project analyzing urban air quality, pollutant dynamics, and seasonal trends across major cities. This project integrates Exploratory Data Analysis (EDA), Statistical Analysis, Unsupervised Machine Learning (K-Means Clustering), and interactive visualization to deliver actionable environmental insights.
 
-Developed by: **Aryan Raj**  
-*B.Tech CSE Data Science | University of Petroleum and Energy Studies (UPES), Dehradun*
-
 ---
 
 ## 📌 Project Overview
@@ -39,9 +36,9 @@ Explore pollutant variations, distribution patterns, and relationships between k
 Combining inferential statistics with unsupervised machine learning to group cities based on pollution severity.
 *   **Seasonal Differences**: Statistically confirms that season strongly impacts air quality, with Summer (~254 µg/m³) and Monsoon (~261 µg/m³) showing significantly higher average PM2.5 compared to Winter (~248 µg/m³).
 *   **City Segmentation (K-Means)**: Segments cities into three distinct clusters:
-    *   🟢 **Cluster 1 (Low Pollution)**: Residential or strictly regulated zones with cleaner profiles.
-    *   🟡 **Cluster 2 (Moderate Pollution)**: Transitional cities experiencing mixed industrial and urban activity.
-    *   🔴 **Cluster 3 (High Pollution)**: Highly industrial, traffic-dense cities with elevated health risks.
+    *  **Cluster 1 (Low Pollution)**: Residential or strictly regulated zones with cleaner profiles.
+    *  **Cluster 2 (Moderate Pollution)**: Transitional cities experiencing mixed industrial and urban activity.
+    *  **Cluster 3 (High Pollution)**: Highly industrial, traffic-dense cities with elevated health risks.
 *   **Particulate Corelation**: Confirms that rising fine particulate matter (PM2.5) corresponds directly to rising dust pollution (PM10), indicating shared emission origins.
 
 🖼️ *Page 2 Visual:*
