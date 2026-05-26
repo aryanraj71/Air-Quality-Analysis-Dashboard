@@ -1,4 +1,4 @@
-# Air Quality Analysis & Interpretation Dashboard 🌬️📊
+# Air Quality Analysis & Interpretation Dashboard 📊
 
 A comprehensive **Power BI Dashboard** project analyzing urban air quality, pollutant dynamics, and seasonal trends across major cities. This project integrates Exploratory Data Analysis (EDA), Statistical Analysis, Unsupervised Machine Learning (K-Means Clustering), and interactive visualization to deliver actionable environmental insights.
 
@@ -83,7 +83,6 @@ Compare air quality parameters across different cities, pollutant categories, an
 │   ├── pg2.png                      # Page 2: Statistical & Clustering Insights
 │   ├── pg3.png                      # Page 3: Filter-Interactive Dashboard
 │   └── pg4.png                      # Page 4: Comparison Dashboard
-├── AirQuality_Analysis_Report.pdf   # Detailed PDF Project Report
 ├── city_day.csv                     # Raw air quality dataset
 ├── AirQuality_Analysis.pbix         # Power BI Desktop source file (4 Pages)
 └── README.md                        # Project documentation (this file)
